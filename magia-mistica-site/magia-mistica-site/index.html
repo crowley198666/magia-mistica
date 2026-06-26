@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magia Mística — Produtos Esotéricos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas class="stars" id="starsCanvas"></canvas>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="nav-wrap">
+    <a href="#top" class="logo">
+      <svg class="sigil" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="14" stroke="#D4AF37" stroke-width="1.2"/>
+        <path d="M16 6 L16 26 M6 16 L26 16" stroke="#D4AF37" stroke-width="0.8" opacity="0.5"/>
+        <circle cx="16" cy="16" r="4" fill="#9B6DD6" opacity="0.8"/>
+      </svg>
+      Magia <span class="gold-word">Mística</span>
+    </a>
+    <nav class="links">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#ritual">Como funciona</a>
+      <a href="#" id="ordersLink">Meus pedidos</a>
+    </nav>
+    <button class="cart-btn" id="openCart">
+      🛒 Carrinho <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div>
+    <div class="hero-eyebrow">Loja esotérica desde sempre, para sempre</div>
+    <h1>Ferramentas para quem escuta <em>o que os olhos não veem</em></h1>
+    <p class="lead">Cristais lapidados à mão, baralhos de tarô consagrados, incensos de resina pura e velas ritualísticas — selecionados para quem trilha o caminho do autoconhecimento.</p>
+    <div class="hero-ctas">
+      <a href="#catalogo" class="btn-primary">Explorar catálogo</a>
+      <a href="#ritual" class="btn-secondary">Como funciona</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <canvas id="constellation"></canvas>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="trust-inner">
+    <div class="trust-item"><span class="ic">🔒</span> Pagamento seguro · PIX, Cartão e Boleto</div>
+    <div class="trust-item"><span class="ic">📦</span> Envio em até 2 dias úteis</div>
+    <div class="trust-item"><span class="ic">✦</span> Peças selecionadas e consagradas</div>
+    <div class="trust-item"><span class="ic">↺</span> Troca em até 7 dias</div>
+  </div>
+</div>
+
+<!-- ================= CATÁLOGO ================= -->
+<section class="section" id="catalogo">
+  <div class="section-head">
+    <div>
+      <h2>O catálogo</h2>
+      <p>Cada peça é selecionada por afinidade energética, não apenas por estética.</p>
+    </div>
+  </div>
+  <div class="category-filters" id="filters">
+    <button class="filter-chip active" data-cat="todos">Todos</button>
+    <button class="filter-chip" data-cat="cristais">Cristais</button>
+    <button class="filter-chip" data-cat="taro">Tarô & Oráculos</button>
+    <button class="filter-chip" data-cat="incensos">Incensos</button>
+    <button class="filter-chip" data-cat="velas">Velas</button>
+  </div>
+  <div class="product-grid" id="productGrid">
+    <div class="grid-loading">Carregando peças místicas...</div>
+  </div>
+</section>
+
+<!-- ================= RITUAL / COMO FUNCIONA ================= -->
+<div class="ritual-strip" id="ritual">
+  <div class="ritual-inner">
+    <div class="ritual-step">
+      <span class="num">Passo I</span>
+      <h4>Escolha sua peça</h4>
+      <p>Navegue pelo catálogo e adicione ao carrinho os itens que ressoam com sua intenção do momento.</p>
+    </div>
+    <div class="ritual-step">
+      <span class="num">Passo II</span>
+      <h4>Finalize o pagamento</h4>
+      <p>Pague via PIX (aprovação imediata), Cartão de crédito ou Boleto bancário, com total segurança.</p>
+    </div>
+    <div class="ritual-step">
+      <span class="num">Passo III</span>
+      <h4>Receba consagrado</h4>
+      <p>Toda peça é embalada com cuidado e enviada já purificada, pronta para uso ritualístico.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="footer-inner">
+    <div style="max-width:280px;">
+      <div class="logo">Magia Mística</div>
+      <p style="opacity:0.6; line-height:1.6;">Produtos esotéricos selecionados para acompanhar sua jornada espiritual.</p>
+    </div>
+    <div class="foot-col">
+      <h5>Loja</h5>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#ritual">Como funciona</a>
+      <a href="#" id="ordersLink2">Meus pedidos</a>
+    </div>
+    <div class="foot-col">
+      <h5>Atendimento</h5>
+      <a href="#">Trocas e devoluções</a>
+      <a href="#">Perguntas frequentes</a>
+      <a href="#">Fale com a loja</a>
+    </div>
+    <div class="foot-col">
+      <h5>Pagamento</h5>
+      <a href="#">PIX</a>
+      <a href="#">Cartão de crédito</a>
+      <a href="#">Boleto bancário</a>
+    </div>
+  </div>
+  <div class="foot-bottom">© 2026 Magia Mística — <a href="admin.html" style="text-decoration:underline;">Acesso administrativo</a></div>
+</footer>
+
+<!-- ================= CART DRAWER ================= -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="cartDrawer">
+  <div class="drawer-head">
+    <h3>Seu carrinho</h3>
+    <button class="close-btn" id="closeCart">✕</button>
+  </div>
+  <div class="drawer-body" id="cartBody"></div>
+  <div class="drawer-foot">
+    <div class="subtotal-row"><span>Subtotal</span><span class="val" id="cartSubtotal">R$ 0,00</span></div>
+    <button class="checkout-btn" id="goCheckout" disabled>Ir para o pagamento</button>
+  </div>
+</aside>
+
+<!-- ================= CHECKOUT MODAL ================= -->
+<div class="modal-overlay" id="checkoutOverlay">
+  <div class="modal">
+    <div class="modal-head">
+      <h3 id="modalTitle">Dados de entrega</h3>
+      <button class="close-btn" id="closeModal">✕</button>
+    </div>
+    <div class="steps-track">
+      <div class="step-dot" id="dot1"></div>
+      <div class="step-dot" id="dot2"></div>
+      <div class="step-dot" id="dot3"></div>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/loja.js"></script>
+</body>
+</html>
